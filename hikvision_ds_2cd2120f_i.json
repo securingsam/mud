@@ -1,0 +1,1067 @@
+{
+    "ietf-mud:mud": {
+        "mud-version": 1,
+        "last-update": "2020-12-31T10:06:43.082603+00:00",
+        "cache-validty": 24,
+        "is-supported": true,
+        "systeminfo": "hikvision_ds_2cd2120f_i",
+        "from-device-policy": {
+            "access-lists": {
+                "access-list": [
+                    {
+                        "name": "from-ipv4-hikvision-ds-2cd2120f-i"
+                    },
+                    {
+                        "name": "from-ipv6-hikvision-ds-2cd2120f-i"
+                    }
+                ]
+            }
+        },
+        "to-device-policy": {
+            "access-lists": {
+                "access-list": [
+                    {
+                        "name": "to-ipv4-hikvision-ds-2cd2120f-i"
+                    },
+                    {
+                        "name": "to-ipv6-hikvision-ds-2cd2120f-i"
+                    }
+                ]
+            }
+        }
+    },
+    "ietf-access-control-list:access-lists": {
+        "acl": [
+            {
+                "name": "from-ipv4-hikvision-ds-2cd2120f-i",
+                "type": "ipv4-acl-type",
+                "aces": {
+                    "ace": [
+                        {
+                            "name": "from-ipv4-hikvision-ds-2cd2120f-i-0",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 2,
+                                    "destination-ipv4-network": "224.0.0.22/32"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-hikvision-ds-2cd2120f-i-1",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 17,
+                                    "destination-ipv4-network": "224.0.0.251/32"
+                                },
+                                "udp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 5353
+                                    },
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 5353
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-hikvision-ds-2cd2120f-i-2",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 17,
+                                    "destination-ipv4-network": "239.255.255.250/32"
+                                },
+                                "udp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 1900
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-hikvision-ds-2cd2120f-i-3",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 6
+                                },
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 9010
+                                    },
+                                    "ietf-mud:direction-initiated": "to-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-hikvision-ds-2cd2120f-i-4",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 6
+                                },
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 9020
+                                    },
+                                    "ietf-mud:direction-initiated": "to-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-hikvision-ds-2cd2120f-i-5",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 6
+                                },
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 49152
+                                    },
+                                    "ietf-mud:direction-initiated": "to-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-hikvision-ds-2cd2120f-i-6",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 6
+                                },
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 554
+                                    },
+                                    "ietf-mud:direction-initiated": "to-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-hikvision-ds-2cd2120f-i-7",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 6
+                                },
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 80
+                                    },
+                                    "ietf-mud:direction-initiated": "to-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-hikvision-ds-2cd2120f-i-8",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 6
+                                },
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 8000
+                                    },
+                                    "ietf-mud:direction-initiated": "to-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-hikvision-ds-2cd2120f-i-9",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 6
+                                },
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 8200
+                                    },
+                                    "ietf-mud:direction-initiated": "to-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-hikvision-ds-2cd2120f-i-10",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 17
+                                },
+                                "udp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 3702
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-hikvision-ds-2cd2120f-i-11",
+                            "matches": {
+                                "ipv4": {
+                                    "ietf-acldns:dst-dnsname": "time.windows.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-hikvision-ds-2cd2120f-i-12",
+                            "matches": {
+                                "ipv4": {
+                                    "ietf-acldns:dst-dnsname": "*.hik-connect.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-hikvision-ds-2cd2120f-i-13",
+                            "matches": {
+                                "ipv4": {
+                                    "ietf-acldns:dst-dnsname": "hik-online.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-hikvision-ds-2cd2120f-i-14",
+                            "matches": {
+                                "ipv4": {
+                                    "ietf-acldns:dst-dnsname": "eu.hiddenservice.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-hikvision-ds-2cd2120f-i-15",
+                            "matches": {
+                                "ipv4": {
+                                    "ietf-acldns:dst-dnsname": "overseas.hiddnsservice.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-hikvision-ds-2cd2120f-i-16",
+                            "matches": {
+                                "ipv4": {
+                                    "ietf-acldns:dst-dnsname": "*.ezviz7.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-hikvision-ds-2cd2120f-i-17",
+                            "matches": {
+                                "ipv4": {
+                                    "ietf-acldns:dst-dnsname": "*.ezvizlife.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-hikvision-ds-2cd2120f-i-18",
+                            "matches": {
+                                "ipv4": {
+                                    "ietf-acldns:dst-dnsname": "www.hik-online.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "to-ipv4-hikvision-ds-2cd2120f-i",
+                "type": "ipv4-acl-type",
+                "aces": {
+                    "ace": [
+                        {
+                            "name": "to-ipv4-hikvision-ds-2cd2120f-i-0",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 6
+                                },
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 9010
+                                    },
+                                    "ietf-mud:direction-initiated": "to-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-hikvision-ds-2cd2120f-i-1",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 6
+                                },
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 9020
+                                    },
+                                    "ietf-mud:direction-initiated": "to-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-hikvision-ds-2cd2120f-i-2",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 6
+                                },
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 49152
+                                    },
+                                    "ietf-mud:direction-initiated": "to-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-hikvision-ds-2cd2120f-i-3",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 6
+                                },
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 554
+                                    },
+                                    "ietf-mud:direction-initiated": "to-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-hikvision-ds-2cd2120f-i-4",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 6
+                                },
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 80
+                                    },
+                                    "ietf-mud:direction-initiated": "to-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-hikvision-ds-2cd2120f-i-5",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 6
+                                },
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 8000
+                                    },
+                                    "ietf-mud:direction-initiated": "to-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-hikvision-ds-2cd2120f-i-6",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 6
+                                },
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 8200
+                                    },
+                                    "ietf-mud:direction-initiated": "to-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-hikvision-ds-2cd2120f-i-7",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 17
+                                },
+                                "udp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 3702
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-hikvision-ds-2cd2120f-i-8",
+                            "matches": {
+                                "ipv4": {
+                                    "ietf-acldns:src-dnsname": "time.windows.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-hikvision-ds-2cd2120f-i-9",
+                            "matches": {
+                                "ipv4": {
+                                    "ietf-acldns:src-dnsname": "*.hik-connect.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-hikvision-ds-2cd2120f-i-10",
+                            "matches": {
+                                "ipv4": {
+                                    "ietf-acldns:src-dnsname": "hik-online.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-hikvision-ds-2cd2120f-i-11",
+                            "matches": {
+                                "ipv4": {
+                                    "ietf-acldns:src-dnsname": "eu.hiddenservice.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-hikvision-ds-2cd2120f-i-12",
+                            "matches": {
+                                "ipv4": {
+                                    "ietf-acldns:src-dnsname": "overseas.hiddnsservice.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-hikvision-ds-2cd2120f-i-13",
+                            "matches": {
+                                "ipv4": {
+                                    "ietf-acldns:src-dnsname": "*.ezviz7.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-hikvision-ds-2cd2120f-i-14",
+                            "matches": {
+                                "ipv4": {
+                                    "ietf-acldns:src-dnsname": "*.ezvizlife.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-hikvision-ds-2cd2120f-i-15",
+                            "matches": {
+                                "ipv4": {
+                                    "ietf-acldns:src-dnsname": "www.hik-online.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "from-ipv6-hikvision-ds-2cd2120f-i",
+                "type": "ipv6-acl-type",
+                "aces": {
+                    "ace": [
+                        {
+                            "name": "from-ipv6-hikvision-ds-2cd2120f-i-0",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 17,
+                                    "destination-ipv6-network": "ff02::fb/32"
+                                },
+                                "udp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 5353
+                                    },
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 5353
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-hikvision-ds-2cd2120f-i-1",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 6
+                                },
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 9010
+                                    },
+                                    "ietf-mud:direction-initiated": "to-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-hikvision-ds-2cd2120f-i-2",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 6
+                                },
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 9020
+                                    },
+                                    "ietf-mud:direction-initiated": "to-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-hikvision-ds-2cd2120f-i-3",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 6
+                                },
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 49152
+                                    },
+                                    "ietf-mud:direction-initiated": "to-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-hikvision-ds-2cd2120f-i-4",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 6
+                                },
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 554
+                                    },
+                                    "ietf-mud:direction-initiated": "to-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-hikvision-ds-2cd2120f-i-5",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 6
+                                },
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 80
+                                    },
+                                    "ietf-mud:direction-initiated": "to-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-hikvision-ds-2cd2120f-i-6",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 6
+                                },
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 8000
+                                    },
+                                    "ietf-mud:direction-initiated": "to-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-hikvision-ds-2cd2120f-i-7",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 6
+                                },
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 8200
+                                    },
+                                    "ietf-mud:direction-initiated": "to-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-hikvision-ds-2cd2120f-i-8",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 17
+                                },
+                                "udp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 3702
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-hikvision-ds-2cd2120f-i-9",
+                            "matches": {
+                                "ipv6": {
+                                    "ietf-acldns:dst-dnsname": "time.windows.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-hikvision-ds-2cd2120f-i-10",
+                            "matches": {
+                                "ipv6": {
+                                    "ietf-acldns:dst-dnsname": "*.hik-connect.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-hikvision-ds-2cd2120f-i-11",
+                            "matches": {
+                                "ipv6": {
+                                    "ietf-acldns:dst-dnsname": "hik-online.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-hikvision-ds-2cd2120f-i-12",
+                            "matches": {
+                                "ipv6": {
+                                    "ietf-acldns:dst-dnsname": "eu.hiddenservice.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-hikvision-ds-2cd2120f-i-13",
+                            "matches": {
+                                "ipv6": {
+                                    "ietf-acldns:dst-dnsname": "overseas.hiddnsservice.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-hikvision-ds-2cd2120f-i-14",
+                            "matches": {
+                                "ipv6": {
+                                    "ietf-acldns:dst-dnsname": "*.ezviz7.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-hikvision-ds-2cd2120f-i-15",
+                            "matches": {
+                                "ipv6": {
+                                    "ietf-acldns:dst-dnsname": "*.ezvizlife.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-hikvision-ds-2cd2120f-i-16",
+                            "matches": {
+                                "ipv6": {
+                                    "ietf-acldns:dst-dnsname": "www.hik-online.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "to-ipv6-hikvision-ds-2cd2120f-i",
+                "type": "ipv6-acl-type",
+                "aces": {
+                    "ace": [
+                        {
+                            "name": "to-ipv6-hikvision-ds-2cd2120f-i-0",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 6
+                                },
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 9010
+                                    },
+                                    "ietf-mud:direction-initiated": "to-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv6-hikvision-ds-2cd2120f-i-1",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 6
+                                },
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 9020
+                                    },
+                                    "ietf-mud:direction-initiated": "to-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv6-hikvision-ds-2cd2120f-i-2",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 6
+                                },
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 49152
+                                    },
+                                    "ietf-mud:direction-initiated": "to-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv6-hikvision-ds-2cd2120f-i-3",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 6
+                                },
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 554
+                                    },
+                                    "ietf-mud:direction-initiated": "to-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv6-hikvision-ds-2cd2120f-i-4",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 6
+                                },
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 80
+                                    },
+                                    "ietf-mud:direction-initiated": "to-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv6-hikvision-ds-2cd2120f-i-5",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 6
+                                },
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 8000
+                                    },
+                                    "ietf-mud:direction-initiated": "to-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv6-hikvision-ds-2cd2120f-i-6",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 6
+                                },
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 8200
+                                    },
+                                    "ietf-mud:direction-initiated": "to-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv6-hikvision-ds-2cd2120f-i-7",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 17
+                                },
+                                "udp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 3702
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv6-hikvision-ds-2cd2120f-i-8",
+                            "matches": {
+                                "ipv6": {
+                                    "ietf-acldns:src-dnsname": "time.windows.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv6-hikvision-ds-2cd2120f-i-9",
+                            "matches": {
+                                "ipv6": {
+                                    "ietf-acldns:src-dnsname": "*.hik-connect.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv6-hikvision-ds-2cd2120f-i-10",
+                            "matches": {
+                                "ipv6": {
+                                    "ietf-acldns:src-dnsname": "hik-online.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv6-hikvision-ds-2cd2120f-i-11",
+                            "matches": {
+                                "ipv6": {
+                                    "ietf-acldns:src-dnsname": "eu.hiddenservice.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv6-hikvision-ds-2cd2120f-i-12",
+                            "matches": {
+                                "ipv6": {
+                                    "ietf-acldns:src-dnsname": "overseas.hiddnsservice.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv6-hikvision-ds-2cd2120f-i-13",
+                            "matches": {
+                                "ipv6": {
+                                    "ietf-acldns:src-dnsname": "*.ezviz7.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv6-hikvision-ds-2cd2120f-i-14",
+                            "matches": {
+                                "ipv6": {
+                                    "ietf-acldns:src-dnsname": "*.ezvizlife.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv6-hikvision-ds-2cd2120f-i-15",
+                            "matches": {
+                                "ipv6": {
+                                    "ietf-acldns:src-dnsname": "www.hik-online.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

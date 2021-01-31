@@ -1,0 +1,607 @@
+{
+    "ietf-mud:mud": {
+        "mud-version": 1,
+        "last-update": "2020-08-20T17:42:16.753819+00:00",
+        "cache-validty": 24,
+        "is-supported": true,
+        "systeminfo": "tp_link_kasa_hs_100",
+        "from-device-policy": {
+            "access-lists": {
+                "access-list": [
+                    {
+                        "name": "from-ipv4-tp-link-kasa-hs-100"
+                    },
+                    {
+                        "name": "from-ipv6-tp-link-kasa-hs-100"
+                    }
+                ]
+            }
+        },
+        "to-device-policy": {
+            "access-lists": {
+                "access-list": [
+                    {
+                        "name": "to-ipv4-tp-link-kasa-hs-100"
+                    },
+                    {
+                        "name": "to-ipv6-tp-link-kasa-hs-100"
+                    }
+                ]
+            }
+        }
+    },
+    "ietf-access-control-list:access-lists": {
+        "acl": [
+            {
+                "name": "from-ipv4-tp-link-kasa-hs-100",
+                "type": "ipv4-acl-type",
+                "aces": {
+                    "ace": [
+                        {
+                            "name": "from-ipv4-tp-link-kasa-hs-100-0",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 2,
+                                    "destination-ipv4-network": "224.0.0.22/32"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-tp-link-kasa-hs-100-1",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 17,
+                                    "destination-ipv4-network": "224.0.0.251/32"
+                                },
+                                "udp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 5353
+                                    },
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 5353
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-tp-link-kasa-hs-100-2",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 17,
+                                    "ietf-acldns:dst-dnsname": "pool.ntp.org"
+                                },
+                                "udp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 123
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-tp-link-kasa-hs-100-3",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 17,
+                                    "ietf-acldns:dst-dnsname": "*.pool.ntp.org"
+                                },
+                                "udp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 123
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-tp-link-kasa-hs-100-4",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 17,
+                                    "ietf-acldns:dst-dnsname": "time*.nist.gov"
+                                },
+                                "udp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 123
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-tp-link-kasa-hs-100-5",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 6,
+                                    "ietf-acldns:dst-dnsname": "*.tplinkra.com"
+                                },
+                                "tcp": {
+                                    "ietf-mud:direction-initiated": "from-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-tp-link-kasa-hs-100-6",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 6,
+                                    "ietf-acldns:dst-dnsname": "*.tplinkcloud.com"
+                                },
+                                "tcp": {
+                                    "ietf-mud:direction-initiated": "from-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-tp-link-kasa-hs-100-7",
+                            "matches": {
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 9999
+                                    },
+                                    "ietf-mud:direction-initiated": "to-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-tp-link-kasa-hs-100-8",
+                            "matches": {
+                                "udp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 9999
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "to-ipv4-tp-link-kasa-hs-100",
+                "type": "ipv4-acl-type",
+                "aces": {
+                    "ace": [
+                        {
+                            "name": "to-ipv4-tp-link-kasa-hs-100-0",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 17,
+                                    "ietf-acldns:src-dnsname": "pool.ntp.org"
+                                },
+                                "udp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 123
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-tp-link-kasa-hs-100-1",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 17,
+                                    "ietf-acldns:src-dnsname": "*.pool.ntp.org"
+                                },
+                                "udp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 123
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-tp-link-kasa-hs-100-2",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 17,
+                                    "ietf-acldns:src-dnsname": "time*.nist.gov"
+                                },
+                                "udp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 123
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-tp-link-kasa-hs-100-3",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 6,
+                                    "ietf-acldns:src-dnsname": "*.tplinkra.com"
+                                },
+                                "tcp": {
+                                    "ietf-mud:direction-initiated": "from-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-tp-link-kasa-hs-100-4",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 6,
+                                    "ietf-acldns:src-dnsname": "*.tplinkcloud.com"
+                                },
+                                "tcp": {
+                                    "ietf-mud:direction-initiated": "from-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-tp-link-kasa-hs-100-5",
+                            "matches": {
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 9999
+                                    },
+                                    "ietf-mud:direction-initiated": "to-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-tp-link-kasa-hs-100-6",
+                            "matches": {
+                                "udp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 9999
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "from-ipv6-tp-link-kasa-hs-100",
+                "type": "ipv6-acl-type",
+                "aces": {
+                    "ace": [
+                        {
+                            "name": "from-ipv6-tp-link-kasa-hs-100-0",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 17,
+                                    "destination-ipv6-network": "ff02::fb/32"
+                                },
+                                "udp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 5353
+                                    },
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 5353
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-tp-link-kasa-hs-100-1",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 58,
+                                    "destination-ipv6-network": "ff02::16/32"
+                                },
+                                "icmpv6": {
+                                    "type": 143
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-tp-link-kasa-hs-100-2",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 58,
+                                    "destination-ipv6-network": "ff02::2/32"
+                                },
+                                "icmpv6": {
+                                    "type": 133
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-tp-link-kasa-hs-100-3",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 17,
+                                    "ietf-acldns:dst-dnsname": "pool.ntp.org"
+                                },
+                                "udp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 123
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-tp-link-kasa-hs-100-4",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 17,
+                                    "ietf-acldns:dst-dnsname": "*.pool.ntp.org"
+                                },
+                                "udp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 123
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-tp-link-kasa-hs-100-5",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 17,
+                                    "ietf-acldns:dst-dnsname": "time*.nist.gov"
+                                },
+                                "udp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 123
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-tp-link-kasa-hs-100-6",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 6,
+                                    "ietf-acldns:dst-dnsname": "*.tplinkra.com"
+                                },
+                                "tcp": {
+                                    "ietf-mud:direction-initiated": "from-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-tp-link-kasa-hs-100-7",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 6,
+                                    "ietf-acldns:dst-dnsname": "*.tplinkcloud.com"
+                                },
+                                "tcp": {
+                                    "ietf-mud:direction-initiated": "from-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-tp-link-kasa-hs-100-8",
+                            "matches": {
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 9999
+                                    },
+                                    "ietf-mud:direction-initiated": "to-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-tp-link-kasa-hs-100-9",
+                            "matches": {
+                                "udp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 9999
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "to-ipv6-tp-link-kasa-hs-100",
+                "type": "ipv6-acl-type",
+                "aces": {
+                    "ace": [
+                        {
+                            "name": "to-ipv6-tp-link-kasa-hs-100-0",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 17,
+                                    "ietf-acldns:src-dnsname": "pool.ntp.org"
+                                },
+                                "udp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 123
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv6-tp-link-kasa-hs-100-1",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 17,
+                                    "ietf-acldns:src-dnsname": "*.pool.ntp.org"
+                                },
+                                "udp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 123
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv6-tp-link-kasa-hs-100-2",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 17,
+                                    "ietf-acldns:src-dnsname": "time*.nist.gov"
+                                },
+                                "udp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 123
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv6-tp-link-kasa-hs-100-3",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 6,
+                                    "ietf-acldns:src-dnsname": "*.tplinkra.com"
+                                },
+                                "tcp": {
+                                    "ietf-mud:direction-initiated": "from-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv6-tp-link-kasa-hs-100-4",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 6,
+                                    "ietf-acldns:src-dnsname": "*.tplinkcloud.com"
+                                },
+                                "tcp": {
+                                    "ietf-mud:direction-initiated": "from-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv6-tp-link-kasa-hs-100-5",
+                            "matches": {
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 9999
+                                    },
+                                    "ietf-mud:direction-initiated": "to-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv6-tp-link-kasa-hs-100-6",
+                            "matches": {
+                                "udp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 9999
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

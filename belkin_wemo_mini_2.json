@@ -1,0 +1,1098 @@
+{
+    "ietf-mud:mud": {
+        "mud-version": 1,
+        "last-update": "2020-08-20T17:43:06.944762+00:00",
+        "cache-validty": 24,
+        "is-supported": true,
+        "systeminfo": "belkin_wemo_mini_2",
+        "from-device-policy": {
+            "access-lists": {
+                "access-list": [
+                    {
+                        "name": "from-ipv4-belkin-wemo-mini-2"
+                    },
+                    {
+                        "name": "from-ipv6-belkin-wemo-mini-2"
+                    }
+                ]
+            }
+        },
+        "to-device-policy": {
+            "access-lists": {
+                "access-list": [
+                    {
+                        "name": "to-ipv4-belkin-wemo-mini-2"
+                    },
+                    {
+                        "name": "to-ipv6-belkin-wemo-mini-2"
+                    }
+                ]
+            }
+        }
+    },
+    "ietf-access-control-list:access-lists": {
+        "acl": [
+            {
+                "name": "from-ipv4-belkin-wemo-mini-2",
+                "type": "ipv4-acl-type",
+                "aces": {
+                    "ace": [
+                        {
+                            "name": "from-ipv4-belkin-wemo-mini-2-0",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 17,
+                                    "destination-ipv4-network": "239.255.255.250/32"
+                                },
+                                "udp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 1900
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-belkin-wemo-mini-2-1",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 17,
+                                    "destination-ipv4-network": "224.0.0.251/32"
+                                },
+                                "udp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 5353
+                                    },
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 5353
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-belkin-wemo-mini-2-2",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 2,
+                                    "destination-ipv4-network": "224.0.0.22/32"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-belkin-wemo-mini-2-3",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 17,
+                                    "destination-ipv4-network": "130.149.17.8/32"
+                                },
+                                "udp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 123
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-belkin-wemo-mini-2-4",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 17,
+                                    "destination-ipv4-network": "129.132.2.21/32"
+                                },
+                                "udp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 123
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-belkin-wemo-mini-2-5",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 17,
+                                    "ietf-acldns:dst-dnsname": "*.openwrt.pool.ntp.org"
+                                },
+                                "udp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 123
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-belkin-wemo-mini-2-6",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 17,
+                                    "ietf-acldns:dst-dnsname": "time.lordy.de"
+                                },
+                                "udp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 123
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-belkin-wemo-mini-2-7",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 17,
+                                    "ietf-acldns:dst-dnsname": "ntps*.tu-berlin.de"
+                                },
+                                "udp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 123
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-belkin-wemo-mini-2-8",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 17,
+                                    "ietf-acldns:dst-dnsname": "time.tic.gl"
+                                },
+                                "udp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 123
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-belkin-wemo-mini-2-9",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 17,
+                                    "ietf-acldns:dst-dnsname": "ee-time.ee.ethz.ch"
+                                },
+                                "udp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 123
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-belkin-wemo-mini-2-10",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 6,
+                                    "ietf-acldns:dst-dnsname": "connectivitycheck.gstatic.com"
+                                },
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 80
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-belkin-wemo-mini-2-11",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 6,
+                                    "ietf-acldns:dst-dnsname": "api.xbcs.net"
+                                },
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 8443
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-belkin-wemo-mini-2-12",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 6,
+                                    "ietf-acldns:dst-dnsname": "nat.xbcs.net"
+                                },
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 3478
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-belkin-wemo-mini-2-13",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 6,
+                                    "ietf-acldns:dst-dnsname": "accounts-api-xbcs-net-1266788097.us-east-1.elb.amazonaws.com"
+                                },
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 8443
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-belkin-wemo-mini-2-14",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 6,
+                                    "ietf-acldns:dst-dnsname": "prod1-api-xbcs-net-889336557.us-east-1.elb.amazonaws.com"
+                                },
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 8443
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-belkin-wemo-mini-2-15",
+                            "matches": {
+                                "ipv4": {
+                                    "ietf-acldns:dst-dnsname": "*.wemo2.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-belkin-wemo-mini-2-16",
+                            "matches": {
+                                "ipv4": {
+                                    "ietf-acldns:dst-dnsname": "*.xwemo.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-belkin-wemo-mini-2-17",
+                            "matches": {
+                                "ipv4": {
+                                    "ietf-acldns:dst-dnsname": "heartbeat.lswf.net"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "to-ipv4-belkin-wemo-mini-2",
+                "type": "ipv4-acl-type",
+                "aces": {
+                    "ace": [
+                        {
+                            "name": "to-ipv4-belkin-wemo-mini-2-0",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 17,
+                                    "source-ipv4-network": "130.149.17.8/32"
+                                },
+                                "udp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 123
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-belkin-wemo-mini-2-1",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 17,
+                                    "source-ipv4-network": "129.132.2.21/32"
+                                },
+                                "udp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 123
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-belkin-wemo-mini-2-2",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 17,
+                                    "ietf-acldns:src-dnsname": "*.openwrt.pool.ntp.org"
+                                },
+                                "udp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 123
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-belkin-wemo-mini-2-3",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 17,
+                                    "ietf-acldns:src-dnsname": "time.lordy.de"
+                                },
+                                "udp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 123
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-belkin-wemo-mini-2-4",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 17,
+                                    "ietf-acldns:src-dnsname": "ntps*.tu-berlin.de"
+                                },
+                                "udp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 123
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-belkin-wemo-mini-2-5",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 17,
+                                    "ietf-acldns:src-dnsname": "time.tic.gl"
+                                },
+                                "udp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 123
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-belkin-wemo-mini-2-6",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 17,
+                                    "ietf-acldns:src-dnsname": "ee-time.ee.ethz.ch"
+                                },
+                                "udp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 123
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-belkin-wemo-mini-2-7",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 6,
+                                    "ietf-acldns:src-dnsname": "connectivitycheck.gstatic.com"
+                                },
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 80
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-belkin-wemo-mini-2-8",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 6,
+                                    "ietf-acldns:src-dnsname": "api.xbcs.net"
+                                },
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 8443
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-belkin-wemo-mini-2-9",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 6,
+                                    "ietf-acldns:src-dnsname": "nat.xbcs.net"
+                                },
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 3478
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-belkin-wemo-mini-2-10",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 6,
+                                    "ietf-acldns:src-dnsname": "accounts-api-xbcs-net-1266788097.us-east-1.elb.amazonaws.com"
+                                },
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 8443
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-belkin-wemo-mini-2-11",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 6,
+                                    "ietf-acldns:src-dnsname": "prod1-api-xbcs-net-889336557.us-east-1.elb.amazonaws.com"
+                                },
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 8443
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-belkin-wemo-mini-2-12",
+                            "matches": {
+                                "ipv4": {
+                                    "ietf-acldns:src-dnsname": "*.wemo2.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-belkin-wemo-mini-2-13",
+                            "matches": {
+                                "ipv4": {
+                                    "ietf-acldns:src-dnsname": "*.xwemo.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-belkin-wemo-mini-2-14",
+                            "matches": {
+                                "ipv4": {
+                                    "ietf-acldns:src-dnsname": "heartbeat.lswf.net"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "from-ipv6-belkin-wemo-mini-2",
+                "type": "ipv6-acl-type",
+                "aces": {
+                    "ace": [
+                        {
+                            "name": "from-ipv6-belkin-wemo-mini-2-0",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 17,
+                                    "destination-ipv6-network": "ff02::fb/32"
+                                },
+                                "udp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 5353
+                                    },
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 5353
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-belkin-wemo-mini-2-1",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 58,
+                                    "destination-ipv6-network": "ff02::16/32"
+                                },
+                                "icmpv6": {
+                                    "type": 143
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-belkin-wemo-mini-2-2",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 17,
+                                    "ietf-acldns:dst-dnsname": "*.openwrt.pool.ntp.org"
+                                },
+                                "udp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 123
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-belkin-wemo-mini-2-3",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 17,
+                                    "ietf-acldns:dst-dnsname": "time.lordy.de"
+                                },
+                                "udp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 123
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-belkin-wemo-mini-2-4",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 17,
+                                    "ietf-acldns:dst-dnsname": "ntps*.tu-berlin.de"
+                                },
+                                "udp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 123
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-belkin-wemo-mini-2-5",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 17,
+                                    "ietf-acldns:dst-dnsname": "time.tic.gl"
+                                },
+                                "udp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 123
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-belkin-wemo-mini-2-6",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 17,
+                                    "ietf-acldns:dst-dnsname": "ee-time.ee.ethz.ch"
+                                },
+                                "udp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 123
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-belkin-wemo-mini-2-7",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 6,
+                                    "ietf-acldns:dst-dnsname": "connectivitycheck.gstatic.com"
+                                },
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 80
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-belkin-wemo-mini-2-8",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 6,
+                                    "ietf-acldns:dst-dnsname": "api.xbcs.net"
+                                },
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 8443
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-belkin-wemo-mini-2-9",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 6,
+                                    "ietf-acldns:dst-dnsname": "nat.xbcs.net"
+                                },
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 3478
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-belkin-wemo-mini-2-10",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 6,
+                                    "ietf-acldns:dst-dnsname": "accounts-api-xbcs-net-1266788097.us-east-1.elb.amazonaws.com"
+                                },
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 8443
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-belkin-wemo-mini-2-11",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 6,
+                                    "ietf-acldns:dst-dnsname": "prod1-api-xbcs-net-889336557.us-east-1.elb.amazonaws.com"
+                                },
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 8443
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-belkin-wemo-mini-2-12",
+                            "matches": {
+                                "ipv6": {
+                                    "ietf-acldns:dst-dnsname": "*.wemo2.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-belkin-wemo-mini-2-13",
+                            "matches": {
+                                "ipv6": {
+                                    "ietf-acldns:dst-dnsname": "*.xwemo.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-belkin-wemo-mini-2-14",
+                            "matches": {
+                                "ipv6": {
+                                    "ietf-acldns:dst-dnsname": "heartbeat.lswf.net"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "to-ipv6-belkin-wemo-mini-2",
+                "type": "ipv6-acl-type",
+                "aces": {
+                    "ace": [
+                        {
+                            "name": "to-ipv6-belkin-wemo-mini-2-0",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 17,
+                                    "ietf-acldns:src-dnsname": "*.openwrt.pool.ntp.org"
+                                },
+                                "udp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 123
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv6-belkin-wemo-mini-2-1",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 17,
+                                    "ietf-acldns:src-dnsname": "time.lordy.de"
+                                },
+                                "udp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 123
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv6-belkin-wemo-mini-2-2",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 17,
+                                    "ietf-acldns:src-dnsname": "ntps*.tu-berlin.de"
+                                },
+                                "udp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 123
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv6-belkin-wemo-mini-2-3",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 17,
+                                    "ietf-acldns:src-dnsname": "time.tic.gl"
+                                },
+                                "udp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 123
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv6-belkin-wemo-mini-2-4",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 17,
+                                    "ietf-acldns:src-dnsname": "ee-time.ee.ethz.ch"
+                                },
+                                "udp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 123
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv6-belkin-wemo-mini-2-5",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 6,
+                                    "ietf-acldns:src-dnsname": "connectivitycheck.gstatic.com"
+                                },
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 80
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv6-belkin-wemo-mini-2-6",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 6,
+                                    "ietf-acldns:src-dnsname": "api.xbcs.net"
+                                },
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 8443
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv6-belkin-wemo-mini-2-7",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 6,
+                                    "ietf-acldns:src-dnsname": "nat.xbcs.net"
+                                },
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 3478
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv6-belkin-wemo-mini-2-8",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 6,
+                                    "ietf-acldns:src-dnsname": "accounts-api-xbcs-net-1266788097.us-east-1.elb.amazonaws.com"
+                                },
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 8443
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv6-belkin-wemo-mini-2-9",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 6,
+                                    "ietf-acldns:src-dnsname": "prod1-api-xbcs-net-889336557.us-east-1.elb.amazonaws.com"
+                                },
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 8443
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv6-belkin-wemo-mini-2-10",
+                            "matches": {
+                                "ipv6": {
+                                    "ietf-acldns:src-dnsname": "*.wemo2.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv6-belkin-wemo-mini-2-11",
+                            "matches": {
+                                "ipv6": {
+                                    "ietf-acldns:src-dnsname": "*.xwemo.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv6-belkin-wemo-mini-2-12",
+                            "matches": {
+                                "ipv6": {
+                                    "ietf-acldns:src-dnsname": "heartbeat.lswf.net"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

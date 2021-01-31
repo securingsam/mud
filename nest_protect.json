@@ -1,0 +1,984 @@
+{
+    "ietf-mud:mud": {
+        "mud-version": 1,
+        "last-update": "2020-08-20T17:38:52.629771+00:00",
+        "cache-validty": 24,
+        "is-supported": true,
+        "systeminfo": "nest_protect",
+        "from-device-policy": {
+            "access-lists": {
+                "access-list": [
+                    {
+                        "name": "from-ipv4-nest-protect"
+                    },
+                    {
+                        "name": "from-ipv6-nest-protect"
+                    }
+                ]
+            }
+        },
+        "to-device-policy": {
+            "access-lists": {
+                "access-list": [
+                    {
+                        "name": "to-ipv4-nest-protect"
+                    },
+                    {
+                        "name": "to-ipv6-nest-protect"
+                    }
+                ]
+            }
+        }
+    },
+    "ietf-access-control-list:access-lists": {
+        "acl": [
+            {
+                "name": "from-ipv4-nest-protect",
+                "type": "ipv4-acl-type",
+                "aces": {
+                    "ace": [
+                        {
+                            "name": "from-ipv4-nest-protect-0",
+                            "matches": {
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 11095
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                },
+                                "ipv4": {
+                                    "protocol": 6,
+                                    "ietf-acldns:dst-dnsname": "czfe*.front01.iad01.production.nest.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-nest-protect-1",
+                            "matches": {
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 11095
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                },
+                                "ipv4": {
+                                    "protocol": 6,
+                                    "ietf-acldns:dst-dnsname": "frontdoor.nest.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-nest-protect-2",
+                            "matches": {
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 11095
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                },
+                                "ipv4": {
+                                    "protocol": 6,
+                                    "ietf-acldns:dst-dnsname": "weave-logsink.nest.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-nest-protect-3",
+                            "matches": {
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 11095
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                },
+                                "ipv4": {
+                                    "protocol": 6,
+                                    "ietf-acldns:dst-dnsname": "fd.rts15.iad01.nest.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-nest-protect-4",
+                            "matches": {
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 80
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                },
+                                "ipv4": {
+                                    "protocol": 6,
+                                    "ietf-acldns:dst-dnsname": "clients*.google.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-nest-protect-5",
+                            "matches": {
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 443
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                },
+                                "ipv4": {
+                                    "protocol": 6,
+                                    "ietf-acldns:dst-dnsname": "*.1e100.net"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-nest-protect-6",
+                            "matches": {
+                                "udp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 443
+                                    }
+                                },
+                                "ipv4": {
+                                    "protocol": 6,
+                                    "ietf-acldns:dst-dnsname": "*.1e100.net"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-nest-protect-7",
+                            "matches": {
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 443
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                },
+                                "ipv4": {
+                                    "protocol": 6,
+                                    "ietf-acldns:dst-dnsname": "*.googleusercontent.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-nest-protect-8",
+                            "matches": {
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 443
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                },
+                                "ipv4": {
+                                    "protocol": 6,
+                                    "ietf-acldns:dst-dnsname": "ec2-18-207-62-3.compute-1.amazonaws.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-nest-protect-9",
+                            "matches": {
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 443
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                },
+                                "ipv4": {
+                                    "protocol": 6,
+                                    "ietf-acldns:dst-dnsname": "ec2-3-215-138-189.compute-1.amazonaws.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-nest-protect-10",
+                            "matches": {
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 443
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                },
+                                "ipv4": {
+                                    "protocol": 6,
+                                    "ietf-acldns:dst-dnsname": "ec2-35-168-201-115.compute-1.amazonaws.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-nest-protect-11",
+                            "matches": {
+                                "udp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 123
+                                    }
+                                },
+                                "ipv4": {
+                                    "protocol": 17,
+                                    "ietf-acldns:dst-dnsname": "time*.google.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "to-ipv4-nest-protect",
+                "type": "ipv4-acl-type",
+                "aces": {
+                    "ace": [
+                        {
+                            "name": "to-ipv4-nest-protect-0",
+                            "matches": {
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 11095
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                },
+                                "ipv4": {
+                                    "protocol": 6,
+                                    "ietf-acldns:src-dnsname": "czfe*.front01.iad01.production.nest.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-nest-protect-1",
+                            "matches": {
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 11095
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                },
+                                "ipv4": {
+                                    "protocol": 6,
+                                    "ietf-acldns:src-dnsname": "frontdoor.nest.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-nest-protect-2",
+                            "matches": {
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 11095
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                },
+                                "ipv4": {
+                                    "protocol": 6,
+                                    "ietf-acldns:src-dnsname": "weave-logsink.nest.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-nest-protect-3",
+                            "matches": {
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 11095
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                },
+                                "ipv4": {
+                                    "protocol": 6,
+                                    "ietf-acldns:src-dnsname": "fd.rts15.iad01.nest.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-nest-protect-4",
+                            "matches": {
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 80
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                },
+                                "ipv4": {
+                                    "protocol": 6,
+                                    "ietf-acldns:src-dnsname": "clients*.google.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-nest-protect-5",
+                            "matches": {
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 443
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                },
+                                "ipv4": {
+                                    "protocol": 6,
+                                    "ietf-acldns:src-dnsname": "*.1e100.net"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-nest-protect-6",
+                            "matches": {
+                                "udp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 443
+                                    }
+                                },
+                                "ipv4": {
+                                    "protocol": 6,
+                                    "ietf-acldns:src-dnsname": "*.1e100.net"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-nest-protect-7",
+                            "matches": {
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 443
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                },
+                                "ipv4": {
+                                    "protocol": 6,
+                                    "ietf-acldns:src-dnsname": "*.googleusercontent.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-nest-protect-8",
+                            "matches": {
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 443
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                },
+                                "ipv4": {
+                                    "protocol": 6,
+                                    "ietf-acldns:src-dnsname": "ec2-18-207-62-3.compute-1.amazonaws.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-nest-protect-9",
+                            "matches": {
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 443
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                },
+                                "ipv4": {
+                                    "protocol": 6,
+                                    "ietf-acldns:src-dnsname": "ec2-3-215-138-189.compute-1.amazonaws.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-nest-protect-10",
+                            "matches": {
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 443
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                },
+                                "ipv4": {
+                                    "protocol": 6,
+                                    "ietf-acldns:src-dnsname": "ec2-35-168-201-115.compute-1.amazonaws.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv4-nest-protect-11",
+                            "matches": {
+                                "udp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 123
+                                    }
+                                },
+                                "ipv4": {
+                                    "protocol": 17,
+                                    "ietf-acldns:src-dnsname": "time*.google.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "from-ipv6-nest-protect",
+                "type": "ipv6-acl-type",
+                "aces": {
+                    "ace": [
+                        {
+                            "name": "from-ipv6-nest-protect-0",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 58,
+                                    "destination-ipv6-network": "ff02::16/32"
+                                },
+                                "icmpv6": {
+                                    "type": 143
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-nest-protect-1",
+                            "matches": {
+                                "ipv6": {
+                                    "protocol": 58,
+                                    "destination-ipv6-network": "ff02::/16"
+                                },
+                                "icmpv6": {
+                                    "type": 131
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-nest-protect-2",
+                            "matches": {
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 11095
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                },
+                                "ipv6": {
+                                    "protocol": 6,
+                                    "ietf-acldns:dst-dnsname": "czfe*.front01.iad01.production.nest.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-nest-protect-3",
+                            "matches": {
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 11095
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                },
+                                "ipv6": {
+                                    "protocol": 6,
+                                    "ietf-acldns:dst-dnsname": "frontdoor.nest.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-nest-protect-4",
+                            "matches": {
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 11095
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                },
+                                "ipv6": {
+                                    "protocol": 6,
+                                    "ietf-acldns:dst-dnsname": "weave-logsink.nest.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-nest-protect-5",
+                            "matches": {
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 11095
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                },
+                                "ipv6": {
+                                    "protocol": 6,
+                                    "ietf-acldns:dst-dnsname": "fd.rts15.iad01.nest.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-nest-protect-6",
+                            "matches": {
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 80
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                },
+                                "ipv6": {
+                                    "protocol": 6,
+                                    "ietf-acldns:dst-dnsname": "clients*.google.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-nest-protect-7",
+                            "matches": {
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 443
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                },
+                                "ipv4": {
+                                    "protocol": 6,
+                                    "ietf-acldns:dst-dnsname": "*.1e100.net"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-nest-protect-8",
+                            "matches": {
+                                "udp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 443
+                                    }
+                                },
+                                "ipv6": {
+                                    "protocol": 6,
+                                    "ietf-acldns:dst-dnsname": "*.1e100.net"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-nest-protect-9",
+                            "matches": {
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 443
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                },
+                                "ipv6": {
+                                    "protocol": 6,
+                                    "ietf-acldns:dst-dnsname": "*.googleusercontent.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-nest-protect-10",
+                            "matches": {
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 443
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                },
+                                "ipv6": {
+                                    "protocol": 6,
+                                    "ietf-acldns:dst-dnsname": "ec2-18-207-62-3.compute-1.amazonaws.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-nest-protect-11",
+                            "matches": {
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 443
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                },
+                                "ipv6": {
+                                    "protocol": 6,
+                                    "ietf-acldns:dst-dnsname": "ec2-3-215-138-189.compute-1.amazonaws.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-nest-protect-12",
+                            "matches": {
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 443
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                },
+                                "ipv6": {
+                                    "protocol": 6,
+                                    "ietf-acldns:dst-dnsname": "ec2-35-168-201-115.compute-1.amazonaws.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv6-nest-protect-13",
+                            "matches": {
+                                "udp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 123
+                                    }
+                                },
+                                "ipv6": {
+                                    "protocol": 17,
+                                    "ietf-acldns:dst-dnsname": "time*.google.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "to-ipv6-nest-protect",
+                "type": "ipv6-acl-type",
+                "aces": {
+                    "ace": [
+                        {
+                            "name": "to-ipv6-nest-protect-0",
+                            "matches": {
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 11095
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                },
+                                "ipv6": {
+                                    "protocol": 6,
+                                    "ietf-acldns:src-dnsname": "czfe*.front01.iad01.production.nest.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv6-nest-protect-1",
+                            "matches": {
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 11095
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                },
+                                "ipv6": {
+                                    "protocol": 6,
+                                    "ietf-acldns:src-dnsname": "frontdoor.nest.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv6-nest-protect-2",
+                            "matches": {
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 11095
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                },
+                                "ipv6": {
+                                    "protocol": 6,
+                                    "ietf-acldns:src-dnsname": "weave-logsink.nest.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv6-nest-protect-3",
+                            "matches": {
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 11095
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                },
+                                "ipv6": {
+                                    "protocol": 6,
+                                    "ietf-acldns:src-dnsname": "fd.rts15.iad01.nest.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv6-nest-protect-4",
+                            "matches": {
+                                "tcp": {
+                                    "source-port": {
+                                        "operator": "eq",
+                                        "port": 80
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                },
+                                "ipv6": {
+                                    "protocol": 6,
+                                    "ietf-acldns:src-dnsname": "clients*.google.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv6-nest-protect-5",
+                            "matches": {
+                                "udp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 443
+                                    }
+                                },
+                                "ipv6": {
+                                    "protocol": 6,
+                                    "ietf-acldns:src-dnsname": "*.1e100.net"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv6-nest-protect-6",
+                            "matches": {
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 443
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                },
+                                "ipv6": {
+                                    "protocol": 6,
+                                    "ietf-acldns:src-dnsname": "*.googleusercontent.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv6-nest-protect-7",
+                            "matches": {
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 443
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                },
+                                "ipv6": {
+                                    "protocol": 6,
+                                    "ietf-acldns:src-dnsname": "ec2-18-207-62-3.compute-1.amazonaws.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv6-nest-protect-8",
+                            "matches": {
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 443
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                },
+                                "ipv6": {
+                                    "protocol": 6,
+                                    "ietf-acldns:src-dnsname": "ec2-3-215-138-189.compute-1.amazonaws.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv6-nest-protect-9",
+                            "matches": {
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 443
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                },
+                                "ipv6": {
+                                    "protocol": 6,
+                                    "ietf-acldns:src-dnsname": "ec2-35-168-201-115.compute-1.amazonaws.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "to-ipv6-nest-protect-10",
+                            "matches": {
+                                "udp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 123
+                                    }
+                                },
+                                "ipv6": {
+                                    "protocol": 17,
+                                    "ietf-acldns:src-dnsname": "time*.google.com"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
